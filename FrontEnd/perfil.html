@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-16">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="recursos/icono.png">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="./css/perfil.css">
+</head>
+<body>
+    <section class="lateral">
+        <div class="logo">
+            <a href="#" class="icono"><img src="recursos/icono.png" alt=""></a>
+            <a href="#">EntrenaGYM</a>
+        </div>
+        <div class="menu">
+            <div class="btn-menu">
+                <a href="../FrontEnd/perfil.html">Mi perfil</a>
+            </div>
+            <div class="btn-menu">
+                <a href="../FrontEnd/rutinas.html">Rutinas</a>
+            </div>
+            <div class="btn-menu">
+                <a href="../FrontEnd/nutricion.html">Nutrición</a>
+            </div>
+        </div>
+        <div class="btn-salir">
+            <a href="../FrontEnd/index.html">Salir</a>
+        </div>
+    </section>
+    <div class="main">
+        <section class="encabezado">
+            <div class="titulo-div">
+                <h3>Entrena con una rutina personalizada</h3>
+            </div>
+        </section>
+        <section class="contenido">
+            <div class="pestaña">
+                <a href="#">Mi perfil</a>
+            </div>
+            <div class="info">
+                <section class="form-actualizar">
+                    <form id="form-usuario">
+                        <!-- Nombre -->
+                        <label for="input-nombre">Nombre</label>
+                        <input id="input-nombre" type="text" class="input-form" name="nombre" placeholder="Nombre">
+                        <!-- Apellido -->
+                        <label for="input-apellido">Apellido</label>
+                        <input id="input-apellido" type="text" class="input-form" name="apellido" placeholder="Apellido">
+                        <!-- Email -->
+                        <label for="input-correo">Correo</label>
+                        <input id="input-correo" type="email" class="input-form" name="correo" placeholder="Correo">
+                        <!-- Usuario -->
+                        <label for="input-usuario">Usuario</label>
+                        <input id="input-usuario" type="text" class="input-form" name="usuario" placeholder="Usuario">
+                        <!-- boton -->
+                        <div id="actualizar">
+                            <button id="btn-actualizarUser" class="btn-actualizar" type="submit">Actulizar</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </section>
+    </div>
+    <script src="../FrontEnd/js/perfil.js"></script>
+</body>
+</html>

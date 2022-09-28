@@ -1,0 +1,69 @@
+*{
+    font-family: sans-serif, serif;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("https://wallpaperbat.com/img/564909-gym-weights-wallpaper-woman-lifting-weights-wallpaper-girls-lifting-weights-wallpaper-and-lifting-weights-wallpaper-high-res.jpg");
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#login{
+    width: 450px;
+    margin: 200px auto;
+    background-color: #000000;
+    opacity: 0.93;
+    border: 2px solid #ffb612;
+    border-radius: 5px;
+    padding: 17px;
+}
+.saludo{
+    text-align: center;
+    color: #ffb612;
+    font-size: 42px;
+    font-weight: bold;
+}
+.form label{
+    color: #ffb612;
+    font-size: 22px;    
+}
+.form input{
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 22px;
+    padding: 6px;
+    background-color: transparent;
+    outline: none;
+    font-size: 26px;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.btn-login{
+    display: block;
+    width: 100%;
+    margin: 16px auto;
+    padding: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    outline: none;
+    color: #000000;
+    background-color: #ffb612;
+    border-radius: 5px;
+}
+.login-footer{
+    text-align: center;
+    margin: 6px;
+}
+.register{
+    display: block;
+    color: #ffffff;
+    width: 100%;
+    margin: 8px 0px;
+    font-size: 18px;
+}
