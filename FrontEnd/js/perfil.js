@@ -3,14 +3,11 @@ const URL_API = "http://localhost:8080/usuario"
 function mostrarUsuario(user){
     
         const user1 = user[0]
-    
         if(user1){
-            const usuario = JSON.stringify(user1)
-            
-            document.getElementById('input-nombre').setAttribute('value', usuario.nombre)
-            document.getElementById('input-apellido').setAttribute('value', usuario.apellidos)
-            document.getElementById('input-correo').setAttribute('value', usuario.email)
-            document.getElementById('input-usuario').setAttribute('value', usuario.usuario)
+            document.getElementById('input-nombre').setAttribute('value', user1.nombre)
+            document.getElementById('input-apellido').setAttribute('value', user1.apellidos)
+            document.getElementById('input-correo').setAttribute('value', user1.email)
+            document.getElementById('input-usuario').setAttribute('value', user1.usuario)
         }
     
 }
