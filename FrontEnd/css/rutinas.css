@@ -197,7 +197,32 @@ form input::placeholder{
     background-color: #ffb612;
 }
 
+.boton-crear{
+    width: 180px;
+    line-height: 40px;
+    height: 100px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 6px 4px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffb612;
+    background-color: #000;
+    border: 2px solid #ffb612;
+    border-radius: 6px;
+    text-align: center;
+}
+.boton-crear:hover{
+    color: #000;
+    background-color: #ffb612;
+}
+
 /* TABLA */
+.no-mostrar{
+    display: none;
+}
+
 
 #titulo {
 	color: white;

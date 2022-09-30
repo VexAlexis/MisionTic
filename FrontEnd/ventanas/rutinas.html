@@ -41,8 +41,9 @@
             </div>
             <div class="info">
                 <section id="section-table-users">
+                    <button class="boton-crear" onclick="nuevaRutina()">+</button>
                     <!--Tabla-->
-                    <table class="table" id="table-users">
+                    <table class="no-mostrar" id="table-users">
                         <!--Encabezado de la tabla-->
                         <thead>
                             <tr>
@@ -50,15 +51,16 @@
                                 <th>Nombre</th>
                                 <th>Categoria</th>
                                 <th>Duracion</th>
+                                <th>Intesidad</th>
                                 <th>Cantidad de ejercicios</th>
                             </tr>
                         </thead>
-                        <tbody id="tbody"></tbody>
+                        <tbody id="rutinas"></tbody>
                     </table>
                 </section>
             </div>
         </section>
     </div>
-    
+    <script src="../js/rutina.js"></script>
 </body>
 </html>
