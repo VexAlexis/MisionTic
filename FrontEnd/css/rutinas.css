@@ -9,7 +9,7 @@ body{
 }
 
 .lateral{
-    width: 350px;
+    width: 400px;
     height: 100vh;
     display: inline-block;
     background-color: #666;
@@ -196,3 +196,30 @@ form input::placeholder{
     color: #000;
     background-color: #ffb612;
 }
+
+/* TABLA */
+
+#titulo {
+	color: white;
+}
+
+td,
+th,
+table {
+	border: 1.5px solid rgb(83, 83, 83);
+	padding-left: 15px;
+	padding-right: 15px;
+	text-align: center;
+}
+table {
+	padding: 0px;
+	width: 100%;
+    background-color: lightsalmon;
+}
+#section-table-users {
+	padding: 40px;
+}
+#cont-btn-crear-usuario {
+	padding-left: 45%;
+}
+

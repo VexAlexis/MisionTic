@@ -5,12 +5,13 @@
 
 body{
     margin: 0px;
+    height: 100vh;
     display: flex;
 }
 
 .lateral{
     width: 400px;
-    height: 100vh;
+    height: 100%;
     display: inline-block;
     background-color: #666;
 }

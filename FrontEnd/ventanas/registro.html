@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-16">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../recursos/icono.png">
+    <title>EntrenaGYM</title>
+    <link rel="stylesheet" href="../css/registro.css">    
+</head>
+<body>
+    <section id="login">
+        <form class="form" onsubmit="getForm(event)">
+            <div class="saludo">
+                <p>Registrarse</p>
+            </div>
+            <!-- Nombre -->
+            <label for="input-nombre">Nombre</label>
+            <input id="input-nombre" type="text" name="nombre" placeholder="Nombre">
+            <!-- Apellido -->
+            <label for="input-apellido">Apellido</label>
+            <input id="input-apellido" type="text" name="apellido" placeholder="Apellido" >  
+            <!-- Correo -->
+            <label for="input-email">Correo</label>
+            <input id="input-email" type="email" name="email" placeholder="Correo" >
+            <!-- Usuario -->
+            <label for="input-usuario">Usuario</label>
+            <input id="input-usuario" type="text" name="usuario" placeholder="Usuario" > 
+            <!-- Contraseña -->
+            <label for="input-password">Contraseña</label>
+            <input id="input-password" type="password" name="contraseña" placeholder="Contraseña" > 
+            <!-- Boton login -->            
+            <button class="btn-login" type="submit">Registrarse</button>
+        </form>      
+        
+    </section>
+    <!--Pie de pagina-->
+    <footer></footer>
+    <!--Cargar scripts-->
+    <script src="../js/registro.js"></script>
+</body>
+</html>

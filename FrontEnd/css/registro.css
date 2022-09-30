@@ -18,8 +18,10 @@ body{
 }
 
 #login{
+    position: relative;
+    top: 3vh;
+	margin: auto;
     width: 450px;
-    margin: 200px auto;
     background-color: #000000;
     opacity: 0.93;
     border: 2px solid #ffb612;
@@ -47,6 +49,7 @@ body{
     border: none;
     border-bottom: 2px solid #ffffff;
     color: #ffffff;
+    color-scheme: #000;
 }
 .form input:-webkit-autofill,
 input:-webkit-autofill:focus {

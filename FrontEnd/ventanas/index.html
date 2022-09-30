@@ -4,19 +4,19 @@
     <meta charset="UTF-16">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="recursos/icono.png">
+    <link rel="icon" href="../recursos/icono.png">
     <title>EntrenaGYM</title>
-    <link rel="stylesheet" href="./css/index.css">    
+    <link rel="stylesheet" href="../css/index.css">    
 </head>
 <body>
     <section id="login">
         <div class="saludo">
             <p>Bienvenido</p>
         </div>
-        <form class="form">
+        <form class="form" onsubmit="getDataForm(event)">
             <!-- Correo -->
             <label for="input-email">Correo</label>
-            <input id="input-email" type="email" name="email" placeholder="Correo" required> 
+            <input id="input-email" type="email" name="email" placeholder="Correo" required value="danielchavarria@hotmail.com"> 
             <!-- Contraseña -->
             <label for="input-password">Contraseña</label>
             <input id="input-password" type="password" name="contraseña" placeholder="Contraseña" required> 
@@ -25,13 +25,13 @@
         </form>
         <div class="login-footer">
             <a href="#" class="register">¿Olvidó su nombre de usuario o contraseña?</a>
-            <a href="#" class="register">¿Desea registrarse?</a>
+            <a href="../ventanas/registro.html" class="register">¿Desea registrarse?</a>
         </div>       
         
     </section>
     <!--Pie de pagina-->
     <footer></footer>
     <!--Cargar scripts-->
-    <script src="js/index.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 </html>

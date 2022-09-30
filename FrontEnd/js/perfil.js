@@ -1,28 +1,31 @@
 const URL_API = "http://localhost:8080/usuario"
+let usuarioActual;
 
 function mostrarUsuario(user){
     
-        const user1 = user[0]
-        if(user1){
-            document.getElementById('input-nombre').setAttribute('value', user1.nombre)
-            document.getElementById('input-apellido').setAttribute('value', user1.apellidos)
-            document.getElementById('input-correo').setAttribute('value', user1.email)
-            document.getElementById('input-usuario').setAttribute('value', user1.usuario)
+        if(user){
+            document.getElementById('input-nombre').setAttribute('value', user.nombre)
+            document.getElementById('input-apellido').setAttribute('value', user.apellidos)
+            document.getElementById('input-correo').setAttribute('value', user.email)
+            document.getElementById('input-usuario').setAttribute('value', user.usuario)
         }
     
 }
+function obtenerUsuarioActual(){
+    usuarioActual = JSON.parse(localStorage.getItem("userLogged"))
+}
 
-
-async function obtenerUsuario(url){
-    const resp = await fetch(url)
+async function consultarEnApi(correo){
+    const resp = await fetch(`${URL_API}/perfil/${correo}`,{
+        method: 'GET'
+    })
     const user = await resp.json()
     return user
 }
 
 async function main(){
-    const url = "http://localhost:8080/usuario"
-    const user = await obtenerUsuario(url)
-    console.log(user[0])
+    obtenerUsuarioActual()
+    const user = await consultarEnApi(usuarioActual.email)
     mostrarUsuario(user)
 }
 
