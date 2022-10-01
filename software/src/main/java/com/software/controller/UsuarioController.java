@@ -6,6 +6,7 @@ import com.software.model.Usuario;
 import com.software.services.UsuarioServices;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -45,6 +46,16 @@ public class UsuarioController {
     @PostMapping("/login")
     public String iniciar(@RequestBody Usuario usuario){
         return uServices.iniciar(usuario);
+    }
+
+    @PutMapping
+    public String updatePersona(@RequestBody Usuario usuario){
+        return uServices.updateUsuario(usuario);
+    }
+
+    @DeleteMapping("/perfil/{correo}")
+    public String delete(@PathVariable(name="correo") String correo){
+        return uServices.delete(correo);
     }
 
 

@@ -198,9 +198,8 @@ form input::placeholder{
 }
 
 .boton-crear{
-    width: 180px;
-    line-height: 40px;
-    height: 100px;
+    width: 200px;
+    height: 50px;
     margin: auto;
     margin-top: 40px;
     margin-bottom: 20px;
@@ -239,7 +238,8 @@ table {
 table {
 	padding: 0px;
 	width: 100%;
-    background-color: lightsalmon;
+    background-color: #000;
+    color: #ffb612;
 }
 #section-table-users {
 	padding: 40px;
@@ -248,3 +248,33 @@ table {
 	padding-left: 45%;
 }
 
+.boton-actualizar{
+    width: 100px;
+    padding: 6px 4px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffb612;
+    background-color: #000;
+    border: 2px solid #ffb612;
+    border-radius: 6px;
+    text-align: center;
+}
+.boton-actualizar:hover{
+    color: #000;
+    background-color: #ffb612;
+}
+
+.boton-x{
+    width: 80px;
+    padding: 6px 4px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: rgb(180, 21, 21);
+    border-radius: 6px;
+    text-align: center;
+}
+.boton-x:hover{
+    color: #ffffff;
+    background-color: rgb(243, 55, 55);
+}

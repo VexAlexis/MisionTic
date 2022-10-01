@@ -8,9 +8,9 @@ function mostrarUsuario(user){
             document.getElementById('input-apellido').setAttribute('value', user.apellidos)
             document.getElementById('input-correo').setAttribute('value', user.email)
             document.getElementById('input-usuario').setAttribute('value', user.usuario)
-        }
-    
+        }   
 }
+
 function obtenerUsuarioActual(){
     usuarioActual = JSON.parse(localStorage.getItem("userLogged"))
 }
@@ -30,3 +30,29 @@ async function main(){
 }
 
 main()
+
+
+
+function actulizarUsuario(e){
+    e.preventDefault()
+    const form = e.target
+    const usuario = {
+        nombre: form.nombre.value,
+        apellidos: form.apellido.value,
+        email: form.correo.value,
+        usuario: form.usuario.value
+    }
+    enviarActualizacion(usuario)
+}
+
+async function enviarActualizacion(usuario){
+    const resp = await fetch(URL_API,{
+        method: 'PUT',
+        headers:{
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(usuario)
+    })
+    const text = await resp.text()
+    alert(text)
+}

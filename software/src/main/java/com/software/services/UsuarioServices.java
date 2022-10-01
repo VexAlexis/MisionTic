@@ -21,6 +21,22 @@ public class UsuarioServices {
         .buildSessionFactory();
     }
 
+    public Usuario encontrarXCorreo(String correo){
+        Usuario usuarioEncontrado = new Usuario();
+        Session session = factory.openSession();
+        session.beginTransaction();
+        try {
+            usuarioEncontrado = session.createQuery("from Usuario u WHERE u.email = ?1", Usuario.class).setParameter(1, correo)
+            .getSingleResult();
+            session.close();
+            return usuarioEncontrado;
+        } catch (Exception e) {
+            e.printStackTrace();
+            session.close();
+        }        
+        return null;
+    }
+
     public List<Usuario> obtenerUsuarios(){
         List<Usuario> usuarios = new ArrayList<>();
         Session session = factory.openSession();
@@ -57,7 +73,7 @@ public class UsuarioServices {
         session.beginTransaction();
         try {
             usuarioEncontrado = session.createQuery("from Usuario u WHERE u.email = ?1 and u.contraseña = ?2 ", Usuario.class).setParameter(1, usuario.getEmail()).setParameter(2, usuario.getContraseña()).getSingleResult();
-            message =  "EXITOSO de "+usuarioEncontrado.getNombre();
+            message =  "Inicio de sesion exitoso, usuario: "+usuarioEncontrado.getNombre();
         } catch (Exception e) {
             e.printStackTrace();
             message = "Credenciales incorrectas "+e.getMessage();
@@ -67,20 +83,46 @@ public class UsuarioServices {
     }
 
 
-    public Usuario encontrarXCorreo(String correo){
-        Usuario usuarioEncontrado = new Usuario();
+    public String updateUsuario(Usuario usuario){
+        String message = "";        
         Session session = factory.openSession();
         session.beginTransaction();
         try {
-            usuarioEncontrado = session.createQuery("from Usuario u WHERE u.email = ?1", Usuario.class).setParameter(1, correo)
-            .getSingleResult();
-            session.close();
-            return usuarioEncontrado;
+            session.merge(usuario);
+            session.getTransaction().commit();
+            message = "Usuario actualizada con exito";
         } catch (Exception e) {
             e.printStackTrace();
-            session.close();
-        }        
-        return null;
+            message = e.getMessage();
+        }
+        session.close();
+        return message;
     }
+
+
+    public String delete(String email){
+        String message = "";
+        Session session = factory.openSession();
+        session.beginTransaction();
+        try {
+            Usuario usuario = encontrarXCorreo(email);
+            session.remove(usuario);
+            session.getTransaction().commit();
+            session.close();
+            message = "Usuario eliminado Existosamente!";
+        } catch (Exception e) {
+            message = e.getMessage();
+        }
+        return message;
+    }
+
+
+
+
+
+
+
+
+
 
 }

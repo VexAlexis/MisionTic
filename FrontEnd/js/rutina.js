@@ -21,8 +21,8 @@ function rellenarTabla(){
             <td>${rutina.intensidad}</td>
             <td>${rutina.cantidadEjercicios}</td>
             <td> 
-                <button class="btn btn-warning" onclick='actualizar(${JSON.stringify(rutina)})'>Actualizar</button> 
-                <button class="btn btn-danger" onclick='eliminarRutina(${rutina.id})'>X</button>
+                <button class="boton-actualizar" onclick='actualizar(${JSON.stringify(rutina)})'>Actualizar</button> 
+                <button class="boton-x" onclick='eliminarRutina(${rutina.id})'>X</button>
             </td>
         </tr>
         `
