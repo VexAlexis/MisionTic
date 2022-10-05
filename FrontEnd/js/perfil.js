@@ -13,6 +13,7 @@ function mostrarUsuario(user){
 
 function obtenerUsuarioActual(){
     usuarioActual = JSON.parse(localStorage.getItem("userLogged"))
+    console.log(usuarioActual); 
 }
 
 async function consultarEnApi(correo){

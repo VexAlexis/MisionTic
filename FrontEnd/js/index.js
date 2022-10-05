@@ -21,7 +21,7 @@ async function login(usuario){
         body: JSON.stringify(usuario)
     })
     const response = await resp.text()
-    if(response.includes("EXITOSO")){
+    if(response.includes("exitoso")){
         localStorage.setItem("userLogged",JSON.stringify(usuario));
         window.location.href = "../ventanas/perfil.html"
     }
